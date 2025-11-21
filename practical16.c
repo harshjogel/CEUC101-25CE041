@@ -1,26 +1,29 @@
-#include <stdio.h>
-int main()
+#include<stdio.h>
+    int main()
 {
-    int s=21,y,c;
-     printf("total 21 stick");
-    do
+        int a, b, c=21;
+        printf("Total matchsticks= %d\n",c);
+        /*for (int i=1; i<=4; i++)*/
+        while(c>1)
     {
-
-    printf("\npick stick in 1-4\n");
-    scanf("%d",&y);
-    if(y<=0 || y>4)
+        printf("\nPick matchsticks 1 to 4: ");
+        scanf("%d",&a);
+        if(a>=5 || a==0)
         {
-            printf("invalid choice");
+            printf("`````````````| Not valid no. |``````````````");
         }
         else
         {
-    s=s-y;
-
-    c=5-y;
-    printf("%d",c);
-    s=s-c;
-    printf("\nremain stick=%d",s);
+        b=5-a;
+            printf("Computer pick: %d\n",b);
+        c=c-(a+b);
+            printf("Remaining sticks: %d\n",c);
+            printf("--------------------------------------------");
         }
-    }while(s>1);
-    printf("\nwasted");
-}
+    }
+    if(c == 1)
+    {
+        printf("\n*************| You are loser |**************");
+    }
+        return 0;
+ }
